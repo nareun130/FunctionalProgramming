@@ -12,6 +12,18 @@ public class FPExam {
         printCourses(courses);
         printCoursesWithSpring(courses);
         printCoursesLength4(courses);
+        printOddSquare3(numbers);
+        printCourseLength(courses);
+    }
+
+    private static void printCourseLength(List<String> courses) {
+        courses.stream().map(course -> course + ":" + course.length()).forEach(System.out::println);
+    }
+
+    private static void printOddSquare3(List<Integer> numbers) {
+        numbers.stream().filter(number -> number % 2 != 0).map(number -> number * number * number)
+                .forEach(System.out::println);
+        line();
     }
 
     private static void printCoursesLength4(List<String> courses) {
